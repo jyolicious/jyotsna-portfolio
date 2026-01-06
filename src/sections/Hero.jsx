@@ -75,10 +75,10 @@ const Hero = () => {
     const link = document.createElement('a');
     if (type === 'fullstack') {
       link.href = '/Jyotsna_FullStack_Resume.pdf';
-      link.download = 'Jyotsna_Kasibhotla_FullStack_Resume.pdf';
+      link.download = 'Jyotsna_FullStack_Resume.pdf';
     } else {
       link.href = '/Jyotsna_DataScience_Resume.pdf';
-      link.download = 'Jyotsna_Kasibhotla_DataScience_Resume.pdf';
+      link.download = 'Jyotsna_DataScience_Resume.pdf';
     }
     document.body.appendChild(link);
     link.click();
@@ -349,12 +349,13 @@ const Hero = () => {
       ))}
 
       {/* Click outside to close resume menu */}
-      {showResumeMenu && (
+      {/*{showResumeMenu && (
         <div
           className="fixed inset-0 z-40"
           onClick={() => setShowResumeMenu(false)}
         />
-      )}
+      )}*/}
+
     </section>
   );
 };

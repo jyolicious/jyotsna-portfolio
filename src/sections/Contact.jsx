@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Linkedin, Github, Send, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -46,20 +47,41 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatus({ type: '', message: '' });
+  e.preventDefault();
+  setIsSubmitting(true);
+  setStatus({ type: '', message: '' });
 
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus({
-        type: 'success',
-        message: 'Thank you for reaching out! I\'ll get back to you soon.'
-      });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitting(false);
-    }, 1500);
-  };
+  emailjs
+    .send(
+      'service_9ov4psb',      // 🔴 service id
+      'template_qe1rlos',     // ✅ your template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'YyU00xHuR3hV50Mw7'       // public key
+    )
+    .then(
+      () => {
+        setStatus({
+          type: 'success',
+          message: "Thank you! Your message has been sent successfully."
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setIsSubmitting(false);
+      },
+      (error) => {
+        console.error(error);
+        setStatus({
+          type: 'error',
+          message: "Something went wrong. Please try again later."
+        });
+        setIsSubmitting(false);
+      }
+    );
+};
 
   const contactInfo = [
     {
