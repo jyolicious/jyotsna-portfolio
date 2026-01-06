@@ -245,41 +245,52 @@ const Hero = () => {
 
             {/* Dropdown Menu */}
             {showResumeMenu && (
-              <motion.div
+              <motion.div onClick={(e) => e.stopPropagation()} onTouchStart={(e) => e.stopPropagation()}
                 className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-64 bg-slate-800/95 backdrop-blur-sm border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden z-50"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
               >
-                <motion.button
-                  onClick={() => handleResumeDownload('fullstack')}
-                  className="w-full px-6 py-4 text-left text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-blue-600/20 hover:text-white transition-all flex items-center gap-3 group"
-                  whileHover={{ x: 5 }}
-                >
-                  <div className="p-2 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/30 transition-colors">
-                    <FileText size={20} className="text-blue-400" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Full Stack Developer</div>
-                    <div className="text-xs text-slate-500">Web Development Focus</div>
-                  </div>
-                </motion.button>
+                <motion.a
+  href="/Jyotsna_FullStack_Resume.pdf"
+  download
+  className="w-full px-6 py-4 text-left text-slate-300
+             hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-blue-600/20
+             hover:text-white transition-all flex items-center gap-3 group"
+  whileHover={{ x: 5 }}
+  onClick={() => setShowResumeMenu(false)}
+>
+  <div className="p-2 bg-blue-600/20 rounded-lg">
+    <FileText size={20} className="text-blue-400" />
+  </div>
+  <div>
+    <div className="font-semibold">Full Stack Developer</div>
+    <div className="text-xs text-slate-500">Web Development Focus</div>
+  </div>
+</motion.a>
+
+              
 
                 <div className="h-px bg-slate-700/50" />
 
-                <motion.button
-                  onClick={() => handleResumeDownload('datascience')}
-                  className="w-full px-6 py-4 text-left text-slate-300 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-pink-600/20 hover:text-white transition-all flex items-center gap-3 group"
-                  whileHover={{ x: 5 }}
-                >
-                  <div className="p-2 bg-purple-600/20 rounded-lg group-hover:bg-purple-600/30 transition-colors">
-                    <FileText size={20} className="text-purple-400" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Data Science</div>
-                    <div className="text-xs text-slate-500">ML & Analytics Focus</div>
-                  </div>
-                </motion.button>
+                <motion.a
+  href="/Jyotsna_DataScience_Resume.pdf"
+  download
+  className="w-full px-6 py-4 text-left text-slate-300
+             hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-pink-600/20
+             hover:text-white transition-all flex items-center gap-3 group"
+  whileHover={{ x: 5 }}
+  onClick={() => setShowResumeMenu(false)}
+>
+  <div className="p-2 bg-purple-600/20 rounded-lg">
+    <FileText size={20} className="text-purple-400" />
+  </div>
+  <div>
+    <div className="font-semibold">Data Science</div>
+    <div className="text-xs text-slate-500">ML & Analytics Focus</div>
+  </div>
+</motion.a>
+
               </motion.div>
             )}
           </div>
