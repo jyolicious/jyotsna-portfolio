@@ -49,7 +49,7 @@ const Hackathons = () => {
       achievement: 'Finalist',
       icon: Code,
       color: 'from-purple-600 to-blue-600',
-      linkedinPost: 'YOUR_LINKEDIN_POST_LINK_2' // Replace with actual LinkedIn post link
+      linkedinPost: 'https://www.linkedin.com/posts/aryan-kulkarni-a24a182b9_hackathon-ai-generativeai-activity-7413574451683913728--lLI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-6_AQBL85XShu2-t-jpBX0tpfncva-kF0' // Replace with actual LinkedIn post link
     },
     {
       name: 'INSPIRON 4.0',
@@ -68,7 +68,7 @@ const Hackathons = () => {
       achievement: 'Innovative Solution',
       icon: Code,
       color: 'from-blue-600 to-cyan-600',
-      linkedinPost: 'YOUR_LINKEDIN_POST_LINK_3' // Replace with actual LinkedIn post link
+      linkedinPost: 'https://www.linkedin.com/posts/jyotsna-kasibhotla-598b89313_ai-sql-machinelearning-activity-7387180015735701504-McaF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-6_AQBL85XShu2-t-jpBX0tpfncva-kF0' // Replace with actual LinkedIn post link
     },
     {
       name: 'Nirman 2025',
@@ -83,38 +83,38 @@ const Hackathons = () => {
         'Developed efficient waste segregation and management system',
         'Reduced landfill segregation costs with smart tracking',
         'Implemented reward system for proper segregation practices',
-        'Presented to industry experts Prof. (Dr.) Shrikant Charhate and Prof. Dr. A.W Santhosh Kumar'
+        'Presented to industry experts Dr.Shrikant Charhate and Dr. A.W Santhosh Kumar'
       ],
       technologies: ['React', 'Node.js', 'MongoDB', 'IoT', 'Machine Learning'],
       achievement: 'Finalist (Top 75 out of 550+ teams)',
       icon: Trophy,
       color: 'from-green-600 to-emerald-600',
-      linkedinPost: 'YOUR_LINKEDIN_POST_LINK_1' // Replace with actual LinkedIn post link
+      linkedinPost: 'https://www.linkedin.com/posts/jyotsna-kasibhotla-598b89313_nirman2025-hackathonexperience-wastemanagement-activity-7300024114595962880-zbkg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE-6_AQBL85XShu2-t-jpBX0tpfncva-kF0' // Replace with actual LinkedIn post link
     },
     {
       name: 'TYNET 2.0',
       organizer: 'International Women Hackathon, RAIT',
       date: 'Jan 2025',
       location: 'Mumbai, Maharashtra',
-      project: 'Emotion-Based Educational Platform',
-      description: 'Gamified web app that offers emotion-based education, bilingual support, and cultural gamification, which increases self-assurance and fosters connections.',
+      project: 'Women Safety Platform',
+      description: 'Women-led hackathon project at the International Women Hackathon, RAIT, building a women safety platform with real-time alerts, emergency notifications, and emotion-aware interactions to promote awareness and confidence.',
       highlights: [
-        'Developed emotion recognition system for personalized learning',
-        'Implemented bilingual support for wider accessibility',
-        'Created cultural gamification elements',
-        'Built engagement features to boost confidence'
-      ],
+      'Designed real-time safety alert and emergency notification system',
+      'Integrated emotion-aware interactions for proactive safety prompts',
+      'Implemented bilingual support for accessibility',
+      'Applied cultural gamification to increase user engagement'
+   ],
       technologies: ['React', 'Node.js', 'MongoDB', 'Machine Learning', 'Express.js'],
       achievement: 'Women-Led Innovation',
       icon: Users,
       color: 'from-pink-600 to-purple-600',
-      linkedinPost: 'YOUR_LINKEDIN_POST_LINK_4' // Replace with actual LinkedIn post link
+      linkedinPost: 'https://www.linkedin.com/posts/jyotsna-kasibhotla-598b89313_hackathon-womenintech-innovation-activity-7293702331911581698-gvZs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE-6_AQBL85XShu2-t-jpBX0tpfncva-kF0' // Replace with actual LinkedIn post link
     }
   ];
 
   const stats = [
     { label: 'Hackathons', value: '4', icon: Trophy },
-    { label: 'Finalist', value: '3x', icon: Code },
+    { label: 'Finalist', value: '4x', icon: Code },
     { label: 'Hours Coded', value: '100+', icon: Users }
   ];
 

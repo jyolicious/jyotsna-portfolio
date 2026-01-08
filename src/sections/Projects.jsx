@@ -45,8 +45,8 @@ const Projects = () => {
         'Real-time pitch generation'
       ],
       technologies: ['React', 'Node.js', 'Python', 'Multi-LLM', 'AI Agents', 'MongoDB'],
-      image: '/assets/projects/ideaforge.png',
-      demoLink: '#',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80',
+      demoLink: 'https://drive.google.com/file/d/1r2pQ4XQyZ8hNhQEa7NVNBnYSWIJz_Uj0/view?usp=sharing',
       githubLink: 'https://github.com/jyolicious',
       gradient: 'from-purple-600 via-blue-600 to-cyan-600',
       icon: Brain
@@ -63,8 +63,8 @@ const Projects = () => {
         'DigiLocker-style accessibility'
       ],
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'BBN', 'AI Chatbot'],
-      image: '/assets/projects/curely.png',
-      demoLink: '#',
+      image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&w=800&h=600&fit=crop&q=80',
+      demoLink: 'https://drive.google.com/file/d/12kpshGFB2DFvS7uXjPSJU4niMRkb8lBa/view?usp=sharing',
       githubLink: 'https://github.com/jyolicious',
       gradient: 'from-emerald-600 via-teal-600 to-cyan-600',
       icon: Database
@@ -81,9 +81,9 @@ const Projects = () => {
         'Newsletter subscription system'
       ],
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'REST API'],
-      image: '/assets/projects/zenflow.png',
-      demoLink: '#',
-      githubLink: 'https://github.com/jyolicious',
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop',
+      demoLink: 'https://drive.google.com/file/d/1v0PvWR9t6GoH6xmTue05Tiu1k64t31St/view?usp=sharing',
+      githubLink: 'https://github.com/jyolicious/Zenflow',
       gradient: 'from-pink-600 via-purple-600 to-indigo-600',
       icon: Globe
     },
@@ -99,8 +99,8 @@ const Projects = () => {
         'High accuracy fraud detection'
       ],
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'NLP', 'ML'],
-      image: '/assets/projects/job-detector.png',
-      demoLink: '#',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop',
+      demoLink: 'https://drive.google.com/file/d/1lAkvs43DUUsF6xXBGTyQa2E3-byiJbGq/view?usp=sharing',
       githubLink: 'https://github.com/jyolicious',
       gradient: 'from-orange-600 via-red-600 to-pink-600',
       icon: Brain
@@ -117,7 +117,7 @@ const Projects = () => {
         'Simplified workflow automation'
       ],
       technologies: ['Python', 'NLP', 'SQL', 'React', 'Node.js', 'PostgreSQL'],
-      image: '/assets/projects/langsql.png',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop',
       demoLink: '#',
       githubLink: 'https://github.com/jyolicious',
       gradient: 'from-blue-600 via-indigo-600 to-purple-600',
@@ -135,7 +135,7 @@ const Projects = () => {
         'Real-time analytics dashboard'
       ],
       technologies: ['React', 'Node.js', 'Machine Learning', 'MongoDB'],
-      image: '/assets/projects/ecosort.png',
+      image: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=800&h=600&fit=crop&q=80',
       demoLink: '#',
       githubLink: 'https://github.com/jyolicious',
       gradient: 'from-green-600 via-emerald-600 to-teal-600',
@@ -286,15 +286,18 @@ const Projects = () => {
                 >
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden bg-slate-800/50">
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.4 }}
-                    >
-                      <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${project.gradient} opacity-20`}>
-                        <project.icon className="text-white/30" size={64} />
-                      </div>
-                    </motion.div>
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.4 }}
+                    ></motion.div>
                     
                     {/* Overlay on hover */}
                     <motion.div
